@@ -1,0 +1,33 @@
+---
+permalink: /404.html
+lang: pt-PT
+layout: default
+---
+<div class="container mt-5">
+  <div class="row align-items-md-stretch">
+    <div class="col-md-8">
+      {% assign page404-text = site.data.pg-404-texts[page.lang] | first %}
+      <div class="container-fluid">
+        <h1 class="mb-5">{{ page404-text.page }}{{ page404-text.leadtext }}</h1>
+        <p>{{ page404-text.text }}</p>
+        <br>
+        <p class="lead">
+          <span>{{ page404-text.hometextpart1 }}</span>
+          <a class="text-capitalize" href="{{ site.baseurl }}{{ page404-text.homelink }}" alt="{{ site.baseurl }}{{ page404-text.homelink }}">{{ page404-text.hometextpart2 }} </a>
+          <span>{{ page404-text.hometextpart3 }}</span>
+        </p>
+        <br>
+        <p>
+          <span>{{ page404-text.emailtextpart1 }}</span>
+          <a class="" href="mailto:{{ site.authoremail }}?Subject=Page%20400%20broken%20link" target="_top">{{ page404-text.emailtextpart2 }}.</a>
+        </p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <img class="img-fluid" src="{{ site.baseurl }}/assets/images/404error.png" alt="404 error image">
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<br>

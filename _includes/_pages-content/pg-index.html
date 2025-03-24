@@ -1,0 +1,31 @@
+<div class="d-flex flex-column flex-lg-row justify-lg-content-between align-items-center">
+  <div class="container-bg-img d-flex flex-column justify-content-center">
+    <div class="background-image d-flex flex-column justify-content-center">
+      <span class="sr-only">Logo INPUGNA</span>
+    </div>
+  </div>
+  <div class="container-text d-flex flex-column justify-content-around align-items-center">
+      <p class="text-center text-shadow">O nosso site está em </p>
+      <h1 class="text-center text-shadow">CONSTRUÇÃO</h1>
+      <p class="text-center text-shadow">segue-nos</p>
+      <!-- social media -->
+      <div class="social-media-container justify-content-center align-items-center">
+        {% if site.data.social-media %}
+        <ul class="nav justify-content-center">
+          {% assign social-media = site.data.social-media %}
+            {% for entry in social-media %}
+              {% assign key = entry | first %}
+                  {% if social-media[key].id %}
+                    <li class="social-media">
+                      <a class="social-name-link" href="{{ social-media[key].href }}{{ social-media[key].id }}" title="{{ social-media[key].title }}" target="_blank" rel="noopener noreferrer">
+                        <img class="social-icon" src = "{{ site.baseurl }}/assets/icons/{{ social-media[key].svg }}.svg" alt="{{ social-media[key].title }}"/>
+                        <img class="social-icon-inv" src = "{{ site.baseurl }}/assets/icons/{{ social-media[key].svg-inv }}.svg" alt="{{ social-media[key].title }}"/>
+                      </a>
+                  </li>
+                  {% endif %}
+                {% endfor %}
+          </ul>
+          {% endif %}
+        </div>
+    </div>
+</div>

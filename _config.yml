@@ -1,0 +1,82 @@
+  # ----------------------------------------------------------------------------
+# CONFIGURATIONS
+
+# Head Meta Configs
+title: InPugna
+description: >- # this means to ignore newlines until "baseurl:"
+  Grupo criativo. Atores que se atreveram a criar o seu caminho, independentes de terceiros e com o propósito de promover as lutas artísticas daqueles que têm a ousadia de não desistir. Teatro, cinema, TV, representação, atuação, ator, atriz, artista, criação.
+baseurl: ""
+url: "http://inpugna.pt"
+relative_permalinks: false # Jekyll defaults to using absolute permalinks instead of relative permalinks
+repository: mariac0ding/InPugna.github.io
+
+# Build settings
+safe: true # will be allowed on Github Pages
+markdown: kramdown
+highlighter: rouge
+
+github: [metadata]
+
+# Generators:
+plugins:
+  - jekyll-feed
+  - jekyll-redirect-from
+  - jekyll-analytics
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-watch
+  - jekyll-coffeescript
+  - jemoji
+  - jekyll-github-metadata
+  - jekyll-include-cache
+  - jekyll-sass-converter
+  - gemfile
+
+exclude:
+  - README.md
+  - LICENSE
+  - serve.sh
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+  # ----------------------------------------------------------------------------
+# SASS settings
+sass:
+  sass_dir: _sass
+  sourcemap: always
+  quiet_deps: true
+  verbose: true
+  style: compressed
+
+# CONTACTS
+
+# Website Author Contacts
+author: MariaCoding
+authorweb: http://mariacoding.codes/
+authoremail: inpugna@mariacoding.codes
+
+#  Project Owner Contacts
+contact-data:
+  email: geral@inpugna.pt
+  email-subject: Contact20%from20%InPugna20%Website
+
+
+# ----------------------------------------------------------------------------
+# Default Scope definitions
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "default"
+      lang: "pt"
+      lang_baseurl: ""
+      lang_url: "http://inpugna.pt/"

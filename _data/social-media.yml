@@ -1,0 +1,32 @@
+# Social Media Settings #
+instagram:
+  id: 'inpugna'
+  href: 'https://www.instagram.com/'
+  title: 'Instagram'
+  icon: 'fa-brands fa-instagram'
+  svg: instagram
+  svg-inv: instagram-inv
+
+youtube:
+  id: '@INPUGNA'
+  href: 'https://www.youtube.com/'
+  title: 'YouTube'
+  icon: 'fa-brands fa-youtube'
+  svg: youtube
+  svg-inv: youtube-inv
+
+podcast:
+  id: '????'
+  href: 'https://linktr.ee/inpugna'
+  title: 'Podcast'
+  icon: 'fa-solid fa-podcast'
+  svg: mic-fill
+  svg-inv: mic-fill-inv
+
+email:
+  id: 'geral@inpugna.pt?subject=Contacto do website'
+  href: 'mailto:'
+  title: 'Email'
+  icon: 'fa-solid fa-envelope'
+  svg: envelope-at-fill
+  svg-inv: envelope-at-fill-inv

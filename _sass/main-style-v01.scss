@@ -1,0 +1,327 @@
+/****** COLORS ******/
+
+/* Gray, white and black */
+$black: #1b1916 !default;
+$gray: #bbbbbb !default;
+
+/* INPUGNA Website Color Palettes */
+$primary-color: #255353 !default;
+$primary-color-rgba: rgba(37, 83, 83,0.6) !default;
+$primary-color-lighter: #2d6565 !default;
+$primary-color-darker: #1d4141 !default;
+
+$accent-color: #fff1d7 !default;
+$accent-color-rgba: rgba(255,241,215,0.1) !default;
+$accent-color-lighter: #fff5e3 !default;
+$accent-color-darker: #e5d8c1 !default;
+
+/****** FONTS ******/
+@font-face {
+    font-family: 'Mythology Of Egypt';
+    src: url("../fonts/Mythology Of Egypt.otf");
+    font-family: 'HaloHand Letter';
+    src: url("../fonts/HaloHandletter.otf");
+}
+
+/*----------------*/
+
+/* Fonts Variables*/
+$font-stack:  "Source Sans 3", serif !default;
+$font-typewritter:  "Special Elite", serif !default;
+$font-size-root: 17px !default;
+$font-size-base: 1rem !default;
+
+/*----------------*/
+/*  Breaking points*/
+$media-breakpoint-sm: 576px; //34em
+$media-breakpoint-md: 768px; //48em
+$media-breakpoint-lg: 992px; //62em
+$media-breakpoint-xl: 1200px; //75em
+$media-breakpoint-xxl: 1400px; //87.5em
+
+/*  MAIN STYLE */
+/****** GENERAL ******/
+html {
+  font-size: $font-size-root;
+  width: 100vw;
+}
+
+body {
+  margin: 0 auto;
+  color: $primary-color;
+  background-color: $accent-color;
+  font-family: $font-stack;
+  font-size: $font-size-base;
+  font-weight: 300;
+  line-height: 1.5;
+  width: inherit;
+  max-width: 100vw;
+  max-height: 100vh;
+  //overflow: hidden;
+ }
+
+ footer {
+   margin-right: 0;
+ }
+
+/****** Media-objects ******/
+.container-bg-img {
+  width: 100vw;
+  height: 50vh;
+  max-width: 100vw;
+  max-height: 100vh;
+}
+.background-image {
+  width: inherit;
+  height: inherit;
+  background-image: url('../images/logo-bg-xs.png');
+  background-repeat: no-repeat;
+  background-attachment: local;
+  background-size: contain;
+  background-position: center center;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  vertical-align: middle;
+}
+  /* Social Media -------- */
+  .social-media-container {
+    margin-bottom: 2rem;
+    ul.nav {
+      li.social-media {
+        a.social-name-link {
+          text-decoration: none;
+          margin: 0.7rem;
+          img.social-icon {
+            margin: 0;
+          }
+          img.social-icon-inv  {
+            margin-top: -0.3rem;
+            margin-left: -2.6rem;
+          }
+        }
+      }
+    }
+  }
+
+/****** Main Typography ******/
+.container-text {
+  background-color: $primary-color;
+  width: 100vw;
+  height: 50vh;
+  max-width: 100vw;
+  max-height: 100vh;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.text-shadow {
+  text-shadow: 0.1rem 0.1rem $primary-color-darker;
+}
+h1 {
+  font-family: $font-typewritter;
+  font-weight: 400;
+  font-size: $font-size-base * 3.5;
+	color: $accent-color;
+	font-weight: 700;
+  line-height: 1.2;
+}
+
+p, span {
+  font-family: $font-stack;
+	font-size: $font-size-base * 1.7;
+	font-weight: 400;
+	line-height: 1.6;
+  color: $accent-color;
+}
+
+span {
+    font-family: inherit !important;
+  	font-size: inherit !important;
+  	font-weight: inherit !important;
+  	line-height: inherit!important;
+    color: inherit !important;
+  }
+
+a, a:link,a:visited  {
+  font-size: inherit;
+	color: $accent-color;
+}
+
+a:hover, a:focus,  {
+	font-size: inherit;
+  font-weight: 300;
+	color: $accent-color-darker;
+}
+
+a:active,  {
+	font-size: inherit;
+	color: $accent-color-darker;
+}
+
+a:disabled {
+	font-size: inherit;
+	color: $gray;
+}
+
+/* Accessebility screen reader */
+/* --------------------------- */
+/* Using Improved .sr-only, thanks to Gaël Poupard https://gist.github.com/ffoodd/000b59f431e3e64e4ce1a24d5bb36034 */
+.sr-only {
+	border: 0 !important;
+	clip: rect(1px, 1px, 1px, 1px) !important;
+	-webkit-clip-path: inset(50%) !important;
+		clip-path: inset(50%) !important;
+	height: 1px !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	padding: 0 !important;
+	position: absolute !important;
+	width: 1px !important;
+	white-space: nowrap !important;
+}
+.sr-only-focusable:focus,
+.sr-only-focusable:active {
+	clip: auto !important;
+	-webkit-clip-path: none !important;
+		clip-path: none !important;
+	height: auto !important;
+	margin: auto !important;
+	overflow: visible !important;
+	width: auto !important;
+	white-space: normal !important;
+}
+/* Buttons-------------------------------------- */
+.btn, a.btn {
+  margin: 0;
+}
+.btn-primary,
+a.btn-primary,
+a.btn-primary:link {
+  font-family: $font-stack;
+  font-size: 0.9em;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  background-color: $primary-color;
+  border: solid 1px $primary-color-darker;
+  color: $accent-color;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+a.btn-primary:hover,
+a.btn-primary:focus {
+  background-color: $accent-color;
+  border: solid 1px $primary-color;
+  color: $primary-color;
+}
+
+.btn-accent,
+a.btn-accent,
+a.btn-accent:link {
+  font-family: $font-stack;
+  font-size: 0.9em;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  background-color: $accent-color;
+  border: solid 1px $accent-color-darker;
+  color: $primary-color;
+}
+
+.btn-accent:hover,
+.btn-accent:focus,
+a.btn-accent:hover,
+a.btn-accent:focus {
+  background-color: $primary-color;
+  border: solid 1px $primary-color-darker;
+  color: $accent-color;
+}
+
+/* Cookies's variables--------------------------------------- */
+#cookie-notice {
+  background-color: $primary-color-rgba;
+  .container {
+    p {
+      font-size: $font-size-base * 0.8;
+      font-weight: 300;
+    }
+    div {
+      a.btn-primary{
+        background-color: $primary-color-lighter;
+
+      }
+      a.btn-primary:hover{
+        background-color: $accent-color-lighter;
+
+      }
+    }
+  }
+}
+
+/*********************************/
+/*   Media Queries  */
+/*********************************/
+
+/*  Small devices (landscape phones, 34em and up >=544px) ***************************************************/
+@media (min-width: $media-breakpoint-sm) {
+  h1 {font-size: $font-size-base * 4.4;}
+  .background-image {
+    background-image: url('../images/logo-bg-sm.png');
+  }
+}
+
+/*  Medium devices (tablets, 48em and up >=768px) ***********************************************************/
+@media (min-width: $media-breakpoint-md) {
+  h1 {font-size: $font-size-base * 5.1;}
+  .background-image {
+    background-image: url('../images/logo-bg-md.png');
+  }
+  footer {
+    margin-right: 2rem;
+  }
+}
+
+/*  Large devices (desktops, 62em and up >=992px) ***********************************************************/
+@media (min-width: $media-breakpoint-lg) {
+  h1 {font-size: $font-size-base * 4.7;}
+  .container-bg-img, .container-text {
+    width: 50vw;
+    height: 100vh;
+    max-height: 50vw;
+    max-height: 100vh;
+  }
+  .container-text {
+    padding-top: 12rem;
+    padding-bottom: 10rem;
+  }
+  .background-image {
+    background-image: url('../images/logo-bg-lg.png');
+    background-position: left center;
+    width: inherit;
+    height: inherit;
+
+  }
+}
+
+/*  Extra large devices (Extra large desktops, 75em and up ≥1200px) -Non-Retina Screens *********************/
+@media (min-width: $media-breakpoint-xl) {
+  h1 {font-size: $font-size-base * 5.6;}
+  .container-text {
+  padding-top: 11rem;
+  padding-bottom: 9rem;
+  }
+  .background-image {
+    background-image: url('../images/logo-bg-xl.png');
+  }
+}
+
+/*  Non-Retina Extra large devices (XXL Larg desktops, 93.75 and up ≥1500px) - Non-Retina Screens *************************/
+@media (min-width: $media-breakpoint-xxl) {
+  h1 {font-size: $font-size-base * 6.7;}
+  .container-text {
+    padding-top: 9rem;
+    padding-bottom: 7rem;
+  }
+  .background-image {
+    background-image: url('../images/logo-bg-xxl.png');
+  }
+}

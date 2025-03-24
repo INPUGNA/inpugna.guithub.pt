@@ -1,0 +1,13 @@
+<!-- Footer -->
+{% assign footer-text = site.data.footer-text[page.lang] | first %}
+<div class="footer flex-footer d-lg-flex flex-col flex-lg-row justify-content-center justify-content-lg-center align-items-center py-3">
+  <!-- Copyright -->
+  <div class="copyright justify-content-center justify-content-lg-center align-items-center">
+    <span class="copyright-text small">{{footer-text.copyright}}
+      <a class="sitemap-link" href="{{ page.permanentlink }}">
+        <!-- Logo cor invertida -->
+        <img src="{{ site.baseurl }}/assets/images/logo-footer.png" alt="Inpugna logo">
+      </a>
+    </span>
+  </div>
+</div>

@@ -1,0 +1,64 @@
+<style>
+    #cookie-notice {display: none;}
+    #cookie-notice a {display: inline-block;}
+    @media (max-width: 767px) {
+        #cookie-notice p {display: block;}
+    }
+</style>
+
+{% assign cookies-text = site.data.cookies-text[page.lang] | first %}
+<div id="cookie-notice" class="container-fluid" width="100%">
+	<div class="container">
+		<p class="d-flex justify-content-center inverse-color text-center small pt-2">{{ cookies-text.message }}<p>
+		<div class="d-flex justify-content-center pb-2">
+			<a id="cookie-notice-accept" class="btn btn-primary btn-sm mx-1">{{ cookies-text.botton-yes }}</a>
+			<a id="cookie-notice-deny" class="btn btn-primary btn-sm mx-1">{{ cookies-text.botton-no }}</a>
+			<a href="{{ cookies-text.link-cookies }}" class="btn btn-primary btn-sm mx-1" target=”_blank”>{{ cookies-text.lear-more }}</a>
+		</div>
+	</div>
+</div>
+
+<script>
+	function createCookie(name,value,days) {
+			var expires = "";
+			if (days) {
+					var date = new Date();
+					date.setTime(date.getTime() + (days*24*60*60*1000));
+					expires = "; expires=" + date.toUTCString();
+			}
+			document.cookie = name + "=" + value + expires + "; path=/";
+	}
+	function readCookie(name) {
+			var nameEQ = name + "=";
+			var ca = document.cookie.split(';');
+			for(var i=0;i < ca.length;i++) {
+					var c = ca[i];
+					while (c.charAt(0)==' ') c = c.substring(1,c.length);
+					if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+			}
+			return null;
+	}
+	function eraseCookie(name) {
+			createCookie(name,"",-1);
+	}
+	//Only add all this in production
+	if(readCookie('cookie-notice-option')=='true') {
+			{% if jekyll.environment == "production" and site.google_analytics %}
+					{% include ga.js %}
+			{% endif %}
+	} else if (readCookie('cookie-notice-option')!='false'){
+			document.getElementById('cookie-notice').style.display = 'block';
+	}
+
+	document.getElementById('cookie-notice-accept').addEventListener("click",function() {
+			createCookie('cookie-notice-option','true',31);
+			document.getElementById('cookie-notice').style.display = 'none';
+			location.reload();
+	});
+
+	document.getElementById('cookie-notice-deny').addEventListener("click",function() {
+			createCookie('cookie-notice-option','false',31);
+			document.getElementById('cookie-notice').style.display = 'none';
+			location.reload();
+	});
+</script>

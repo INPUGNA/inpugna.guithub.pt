@@ -1,0 +1,18 @@
+# Footer in Portuguese:
+# ----------------------
+pt-PT:
+-
+  copyright: Copyright ©2024 todos os direitos são reservados a
+  see-site-map: "Veja o "
+  map-site: " Mapa do Site"
+  map-site-url: /mapa-do-site.html
+
+
+  # Footer in English:
+# ----------------------
+en-US:
+-
+  copyright: Copyright ©2024 all rights reserved to
+  see-site-map: See the
+  map-site: Site Map
+  map-site-url: /en/sitemap.html

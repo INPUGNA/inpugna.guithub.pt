@@ -1,0 +1,20 @@
+# Login Cookies info:
+# ----------------------
+# Login Cookies info in Portuguese
+pt-PT:
+-
+  message: Utilizamos apenas cookies estritamente necessários para garantir que lhe proporcionamos a melhor experiência no nosso site e análise de visitantes. Se continuar a utilizar este site, assumiremos que está satisfeito com isso. Sem estes cookies, não podemos fornecer-lhe serviços essenciais no nosso website.
+  botton-yes: Aceito
+  botton-no: Declino
+  lear-more: mais info
+  link-cookies: https://europa.eu/youreurope/business/dealing-with-customers/data-protection/online-privacy/index_pt.htm
+
+# ----------------------
+# Login Cookies info in English
+en-US:
+-
+  message: We use only strictly necessary cookies to ensure that we give you the best experience on our website and analyse website visitors. If you continue to use this site we will assume that you are happy with it. Without these cookies, we cannot provide you essential services on our website.
+  botton-yes: I agree
+  botton-no: I decline
+  lear-more: more info
+  link-cookies: https://gdpr.eu/cookies/
