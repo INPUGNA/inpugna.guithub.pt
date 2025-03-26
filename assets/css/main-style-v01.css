@@ -31,6 +31,7 @@ body {
   width: inherit;
   max-width: 100vw;
   max-height: 100vh;
+  overflow: hidden;
 }
 
 footer {
@@ -43,11 +44,13 @@ footer {
   height: 50vh;
   max-width: 100vw;
   max-height: 100vh;
+  min-width: 100vw;
 }
 
 .background-image {
   width: inherit;
   height: inherit;
+  max-height: 97vw;
   background-image: url("../images/logo-bg-xs.png");
   background-repeat: no-repeat;
   background-attachment: local;
@@ -92,7 +95,7 @@ footer {
 h1 {
   font-family: "Special Elite", serif;
   font-weight: 400;
-  font-size: 3.5rem;
+  font-size: 3.2rem;
   color: #fff1d7;
   font-weight: 700;
   line-height: 1.2;
@@ -232,7 +235,7 @@ a.btn-accent:focus {
 /*  Small devices (landscape phones, 34em and up >=544px) ***************************************************/
 @media (min-width: 576px) {
   h1 {
-    font-size: 4.4rem;
+    font-size: 4.3rem;
   }
   .background-image {
     background-image: url("../images/logo-bg-sm.png");
@@ -241,7 +244,7 @@ a.btn-accent:focus {
 /*  Medium devices (tablets, 48em and up >=768px) ***********************************************************/
 @media (min-width: 768px) {
   h1 {
-    font-size: 5.1rem;
+    font-size: 5rem;
   }
   .background-image {
     background-image: url("../images/logo-bg-md.png");
@@ -258,6 +261,7 @@ a.btn-accent:focus {
   .container-bg-img, .container-text {
     width: 50vw;
     height: 100vh;
+    min-width: 50vw;
     max-height: 50vw;
     max-height: 100vh;
   }
@@ -270,6 +274,7 @@ a.btn-accent:focus {
     background-position: left center;
     width: inherit;
     height: inherit;
+    max-height: 45vw;
   }
 }
 /*  Extra large devices (Extra large desktops, 75em and up ≥1200px) -Non-Retina Screens *********************/
